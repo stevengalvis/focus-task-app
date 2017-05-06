@@ -18,7 +18,7 @@ function renderTask(task) {
     '<button type ="button" class ="reset-button" id="reset" name="reset">Delete</button>';
     $('.task-result').html(taskElement);
     hideAddInput();
-    waitforDelete();
+
 }
 
 function hideAddInput(){
@@ -33,18 +33,19 @@ function waitforDelete(){
 }
 
 
-
-
-
-
 //event listeners
 
 
-
+function watchForSubmit() {
     $('.task-form').on('submit', function(e){
         e.preventDefault();
         renderTask($('.text-input').val());
     });
+}
 
 
-$(function(){});
+
+$(function(){
+    watchForSubmit();
+    waitforDelete();
+});
