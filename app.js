@@ -9,7 +9,14 @@ function getDataFromAPI(searchTerm){
     }
     $.getJSON(GIPHY_URL, query, function(data){
         console.log(data);
-        // $('.task-result')
+        var results = data.data;
+        var resultElement = '';
+        if (data){
+            resultElement += '<img src = "' + results[0].images.downsized.url + '">';
+            console.log(resultElement);
+        }
+
+        $('.task-result').html(resultElement);
     });
 }
 
@@ -27,8 +34,8 @@ function hideAddInput(){
 
 function waitforDelete(){
     $('.task-result').on('click', '.reset-button', function(e){
-    alert('hi');
-    console.log('ok');
+    getDataFromAPI('fail');
+    $('.task-form').removeClass('visuallyhidden');
     });
 }
 
