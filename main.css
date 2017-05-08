@@ -3,10 +3,31 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-body,html{
-    padding:60px;
+
+html{
+    background: url(images/space-background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
+.task-form{
+    /*color: #fff;*/
+    margin:  0 auto;
+    width: 300px;
+    height: 100px;
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+
+}
 
 .visuallyhidden {
     border: 0;
