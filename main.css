@@ -50,7 +50,7 @@ body{
     border-left: none;
     border-right: none;
     border-bottom: 2px solid #fff;
-    max-width: 50%;
+    max-width: 40%;
 }
 
 .text-input:focus{
@@ -67,7 +67,34 @@ body{
 
 }
 
-/* TODO: add in class name - */
+.done-button{
+    background: transparent;
+    color: #fff;
+    border: none;
+}
+
+.reset-button{
+    background: transparent;
+    color: #fff;
+    border: none;
+}
+
+.fa-check:hover{
+    color: green;
+}
+
+.fa-trash-o:hover{
+    color: red;
+}
+.task-name{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight:  300;
+    line-height: 150%;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 0 1px 5px rgba(0,0,0,.1);
+}
 .visually-hidden {
     border: 0;
     clip: rect(0 0 0 0);

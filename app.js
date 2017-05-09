@@ -20,8 +20,8 @@ function getDataFromAPI(searchTerm){
 }
 
 function renderTask(task) {
-    var taskElement = '<button type="button" class = "done-button" name="button">Done</button>' + '<span class = "task-name">' + task + '</span>'  +
-    '<button type ="button" class ="reset-button" id="reset" name="reset">Delete</button>';
+    var taskElement = '<button type="button" class = "done-button" name="button"><i class="fa fa-check fa-3x" aria-hidden="true"></i></button>' + '<span class = "task-name">' + task + '</span>'  +
+    '<button type ="button" class ="reset-button" id="reset" name="reset"><i class="fa fa-trash-o fa-3x" aria-hidden="true"></i></button>';
     $('.task-result').html(taskElement);
     hideAddInput();
 
@@ -44,7 +44,7 @@ function waitforDelete(){
 function waitForDone(){
     $('.task-result').on('click','.done-button',function(e){
         getDataFromAPI('success');
-        $('task-form').removeClass('visually-hidden');
+        $('.task-form').removeClass('visually-hidden');
     });
 }
 
