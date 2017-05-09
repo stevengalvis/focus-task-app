@@ -1,4 +1,3 @@
-
 var GIPHY_URL = 'http://api.giphy.com/v1/gifs/search';
 
 function getDataFromAPI(searchTerm){
@@ -21,7 +20,7 @@ function getDataFromAPI(searchTerm){
 }
 
 function renderTask(task) {
-    var taskElement = '<button type="button" class = "done-button" name="button">Done</button>' + '<span>' + task + '</span>'  +
+    var taskElement = '<button type="button" class = "done-button" name="button">Done</button>' + '<span class = "task-name">' + task + '</span>'  +
     '<button type ="button" class ="reset-button" id="reset" name="reset">Delete</button>';
     $('.task-result').html(taskElement);
     hideAddInput();
@@ -29,25 +28,28 @@ function renderTask(task) {
 }
 
 function hideAddInput(){
-    $('.task-form').addClass('visuallyhidden');
+    $('.task-form').addClass('visually-hidden');
 }
 
+
+
+//event listenerss
 function waitforDelete(){
     $('.task-result').on('click', '.reset-button', function(e){
-    getDataFromAPI('fail');
-    $('.task-form').removeClass('visuallyhidden');
+        getDataFromAPI('fail');
+        $('.task-form').removeClass('visually-hidden');
     });
 }
 
 function waitForDone(){
     $('.task-result').on('click','.done-button',function(e){
         getDataFromAPI('success');
-        $('task-form').removeClass('visuallyhidden');
+        $('task-form').removeClass('visually-hidden');
     });
 }
 
 
-//event listeners
+
 
 
 function watchForSubmit() {

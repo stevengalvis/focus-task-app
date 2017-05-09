@@ -4,7 +4,8 @@
           box-sizing: border-box;
 }
 
-html{
+
+body{
     background: url(images/space-background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -13,11 +14,48 @@ html{
 }
 
 .task-form{
-    /*color: #fff;*/
-    margin:  0 auto;
-    width: 300px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight:  300;
+    line-height: 150%;
+    font-size: 35.1px;
+    text-align: center;
+    text-shadow: 0 1px 5px rgba(0,0,0,.1);
+    width: 60%;
     height: 100px;
 
+}
+
+.add-item{
+    background: transparent;
+    color: #fff;
+    border: none;
+}
+
+.add-item:hover{
+    border: 1px solid #fff;
+
+}
+
+.task-label{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+.text-input{
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #fff;
+    max-width: 50%;
+}
+
+.text-input:focus{
+    outline: 0;
+    color: #fff;
 }
 
 .container{
@@ -25,11 +63,12 @@ html{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    flex-direction: column;
+    flex-wrap: nowrap;
 
 }
 
-.visuallyhidden {
+/* TODO: add in class name - */
+.visually-hidden {
     border: 0;
     clip: rect(0 0 0 0);
     -webkit-clip-path: inset(50%);
