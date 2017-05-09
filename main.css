@@ -86,6 +86,8 @@ body{
 .fa-trash-o:hover{
     color: red;
 }
+
+
 .task-name{
     color: #fff;
     font-family: 'Roboto', sans-serif;

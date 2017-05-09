@@ -1,9 +1,9 @@
-var GIPHY_URL = 'http://api.giphy.com/v1/gifs/search';
+var GIPHY_URL = 'http://api.giphy.com/v1/gifs/random';
 
 function getDataFromAPI(searchTerm){
     var query = {
         limit: 1,
-        q: searchTerm,
+        tag: searchTerm,
         api_key: 'dc6zaTOxFJmzC'
     }
     $.getJSON(GIPHY_URL, query, function(data){
@@ -11,7 +11,7 @@ function getDataFromAPI(searchTerm){
         var results = data.data;
         var resultElement = '';
         if (data){
-            resultElement += '<img src = "' + results[0].images.downsized.url + '">';
+            resultElement += '<img src = "' + results.fixed_height_downsampled_url + '">';
             console.log(resultElement);
         }
 
@@ -38,6 +38,7 @@ function waitforDelete(){
     $('.task-result').on('click', '.reset-button', function(e){
         getDataFromAPI('fail');
         $('.task-form').removeClass('visually-hidden');
+        $('.task-form').trigger('reset');
     });
 }
 
@@ -45,6 +46,7 @@ function waitForDone(){
     $('.task-result').on('click','.done-button',function(e){
         getDataFromAPI('success');
         $('.task-form').removeClass('visually-hidden');
+        $('.task-form').trigger('reset');
     });
 }
 
