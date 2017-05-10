@@ -64,7 +64,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
+
 
 }
 
@@ -72,12 +72,14 @@ body{
     background: transparent;
     color: #fff;
     border: none;
+    margin-right: 20px;
 }
 
 .reset-button{
     background: transparent;
     color: #fff;
     border: none;
+    margin-left: 20px;
 }
 
 .fa-check:hover{

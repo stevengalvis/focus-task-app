@@ -23,7 +23,9 @@ function renderTask(task) {
     var taskElement = '<button type="button" class = "done-button" name="button"><i class="fa fa-check fa-3x" aria-hidden="true"></i></button>' + '<span class = "task-name">' + task + '</span>'  +
     '<button type ="button" class ="reset-button" id="reset" name="reset"><i class="fa fa-trash-o fa-3x" aria-hidden="true"></i></button>';
     $('.task-result').html(taskElement);
+
     hideAddInput();
+
 
 }
 
