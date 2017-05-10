@@ -5,7 +5,7 @@
 }
 
 
-body{
+body {
     background: url(images/space-background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -13,7 +13,7 @@ body{
     background-size: cover;
 }
 
-.task-form{
+.task-form {
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-weight:  300;
@@ -26,25 +26,22 @@ body{
 
 }
 
-.add-item{
+.add-item {
     background: transparent;
     color: #fff;
     border: none;
 }
 
-.add-item:hover{
+.add-item:hover {
     border: 1px solid #fff;
-
 }
 
-.task-label{
+.task-label {
     width: 100%;
     margin: 0 auto;
 }
 
-
-
-.text-input{
+.text-input {
     background: transparent;
     border-top: none;
     border-left: none;
@@ -53,45 +50,43 @@ body{
     max-width: 40%;
 }
 
-.text-input:focus{
+.text-input:focus {
     outline: 0;
     color: #fff;
 }
 
-.container{
+.container {
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-
-
 }
 
-.done-button{
+.done-button {
     background: transparent;
     color: #fff;
     border: none;
     margin-right: 20px;
 }
 
-.reset-button{
+.reset-button {
     background: transparent;
     color: #fff;
     border: none;
     margin-left: 20px;
 }
 
-.fa-check:hover{
+.fa-check:hover {
     color: green;
 }
 
-.fa-trash-o:hover{
+.fa-trash-o:hover {
     color: red;
 }
 
 
-.task-name{
+.task-name {
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-weight:  300;
