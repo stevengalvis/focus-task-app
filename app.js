@@ -111,7 +111,28 @@ function watchForSubmit() {
     $('.task-form').on('submit', function(e){
         e.preventDefault();
         renderTask($('.text-input').val());
+        swal({
+  title: "An input!",
+  text: "Write something interesting:",
+  type: "input",
+  showCancelButton: true,
+  closeOnConfirm: false,
+  animation: "slide-from-top",
+  inputPlaceholder: "Enter total task time"
+},
+function(inputValue){
+  if (inputValue === false) return false;
+
+  if (inputValue === "") {
+    swal.showInputError("You need to write something!");
+    return false
+  }
+
+  swal("Timer Set!", "Your timer is set to: " + inputValue + ' minutes',  "success");
+  timer(inputValue * 60);
+});
     });
+
 }
 
 
