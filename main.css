@@ -26,6 +26,11 @@ body {
 
 }
 
+.display-time-left{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
 .add-item {
     background: transparent;
     color: #fff;

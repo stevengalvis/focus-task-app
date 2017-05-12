@@ -3,14 +3,29 @@
     <head>
         <meta charset="utf-8">
         <title>Focus Task App</title>
+        <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAkBfAAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREREREREREREREREREQAAAAAAEREQACIgAAABERAAIiAAAAEREAAiIAAAAREQACIgAAABERAAIiIiAAEREAAiIiIAAREQACIgAAABERAAIiAAAAEREAAiIiIAAREQAAIiIgABEREAAAAAABERERERERERERERERERERERH//wAA4AcAAMADAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAOAHAAD//wAA" rel="icon" type="image/x-icon" />
         <meta name="viewport" content=" width  = device-width, initial-scale = 1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link rel="stylesheet" href="main.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
     </head>
     <body>
+        <div class = "timer">
+            <div class = "timer-controls">
+                <!-- <button data-time="300" class="timer-button">5</button>
+                <button data-time="900" class="timer-button">15</button>
+                <button data-time="1200" class="timer-button">20</button> -->
+                <form name ="customForm" id="custom">
+                <input type="text" name ="minutes" placeholder = "Enter Minutes">
+            </form>
+            </div>
+            <div class="display">
+                <h1 class = "display-time-left"></h1>
+            </div>
+        </div>
         <div class="container">
             <div class="task-result">
 
@@ -29,5 +44,6 @@
         <script src="app.js" charset="utf-8"></script>
         <!-- link to font-awesome -->
          <script src="https://use.fontawesome.com/fb7adda49e.js"></script>
+         <script src="sweetalert-master/dist/sweetalert.min.js"></script>
     </body>
 </html>
