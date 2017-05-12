@@ -2,7 +2,7 @@
 var GIPHY_URL = 'http://api.giphy.com/v1/gifs/random';
 var countdown = void 0;
 var timerDisplay = document.querySelector('.display-time-left');
-var buttons = document.querySelectorAll('[data-time]');
+
 
 function timer(seconds){
     //clear any existing timerDisplay
@@ -30,26 +30,6 @@ function displayTimeLeft(seconds){
     timerDisplay.textContent = display;
 }
 
-
-
-function startTimer(){
-    var seconds = parseInt(this.dataset.time);
-    timer(seconds);
-}
-
-buttons.forEach(function(button){
-    return button.addEventListener('click', startTimer);
-});
-
-document.customForm.addEventListener('submit',function(e){
-    e.preventDefault();
-    var mins = this.minutes.value;
-    console.log(mins);
-    timer(mins * 60);
-    this.reset();
-});
-
-
 function getDataFromAPI(searchTerm){
     var query = {
         limit: 1,
@@ -75,8 +55,6 @@ function renderTask(task) {
     $('.task-result').html(taskElement);
 
     hideAddInput();
-
-
 }
 
 function hideAddInput(){
@@ -91,6 +69,9 @@ function waitforDelete(){
         getDataFromAPI('fail');
         $('.task-form').removeClass('visually-hidden');
         $('.task-form').trigger('reset');
+        clearInterval(countdown);
+        timerDisplay.textContent = '';
+        document.title = '0:00';
     });
 }
 
@@ -100,25 +81,24 @@ function waitForDone(){
         getDataFromAPI('success');
         $('.task-form').removeClass('visually-hidden');
         $('.task-form').trigger('reset');
+        clearInterval(countdown);
+        timerDisplay.textContent = '';
+        document.title = '0:00';
     });
 }
-
-
-
-
 
 function watchForSubmit() {
     $('.task-form').on('submit', function(e){
         e.preventDefault();
         renderTask($('.text-input').val());
         swal({
-  title: "An input!",
-  text: "Write something interesting:",
+  title: "Set Total Task time",
+  text: "Enter in minutes:",
   type: "input",
   showCancelButton: true,
   closeOnConfirm: false,
   animation: "slide-from-top",
-  inputPlaceholder: "Enter total task time"
+  inputPlaceholder: "e.g 25"
 },
 function(inputValue){
   if (inputValue === false) return false;
@@ -134,8 +114,6 @@ function(inputValue){
     });
 
 }
-
-
 
 $(function(){
     watchForSubmit();
