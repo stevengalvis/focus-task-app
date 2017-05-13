@@ -6,7 +6,8 @@
 
 
 body {
-    background: url(images/space-background.jpg) no-repeat center center fixed;
+    /*background: url(images/space-background.jpg) no-repeat center center fixed;*/
+    background-color: #942222;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -29,6 +30,7 @@ body {
 .display-time-left{
     color: #fff;
     font-family: 'Roboto', sans-serif;
+    font-size: 50px;
 }
 
 .add-item {
