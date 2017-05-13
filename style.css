@@ -1,0 +1,8 @@
+body {
+    background: url(images/woods-background.jpg.jpg) no-repeat center center fixed;
+    background-color: rgb(138, 220, 179);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
