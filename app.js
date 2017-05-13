@@ -94,53 +94,38 @@ function watchForSubmit() {
     $('.task-form').on('submit', function(e){
         e.preventDefault();
         renderTask($('.text-input').val());
-        swal({
-  title: "Set Total Task time",
-  text: "Enter in minutes:",
-  type: "input",
-  showCancelButton: true,
-  closeOnConfirm: false,
-  animation: "slide-from-top",
-  inputPlaceholder: "e.g 25"
-},
-function(inputValue){
-  if (inputValue === false) return false;
-
-  if (inputValue === "") {
-    swal.showInputError("You need to write something!");
-    return false
-  }
-
-  swal("Timer Set!", "Your timer is set to: " + inputValue + ' minutes',  "success");
-  timer(inputValue * 60);
-});
+        setTimer();
     });
 
 }
 
 function waitForSetTimer(){
     $('.task-result').on('click','.start-timer', function(e){
-        swal({
-  title: "Set Total Task time",
-  text: "Enter in minutes:",
-  type: "input",
-  showCancelButton: true,
-  closeOnConfirm: false,
-  animation: "slide-from-top",
-  inputPlaceholder: "e.g 25"
+        setTimer();
+    });
+}
+
+function setTimer(){
+    swal({
+title: "Set Total Task time",
+text: "Enter in minutes:",
+type: "input",
+showCancelButton: true,
+closeOnConfirm: false,
+animation: "slide-from-top",
+inputPlaceholder: "e.g 25"
 },
 function(inputValue){
-  if (inputValue === false) return false;
+if (inputValue === false) return false;
 
-  if (inputValue === "") {
-    swal.showInputError("You need to write something!");
-    return false
-  }
+if (inputValue === "") {
+swal.showInputError("You need to write something!");
+return false
+}
 
-  swal("Timer Set!", "Your timer is set to: " + inputValue + ' minutes',  "success");
-  timer(inputValue * 60);
+swal("Timer Set!", "Your timer is set to: " + inputValue + ' minutes',  "success");
+timer(inputValue * 60);
 });
-    });
 }
 
 $(function(){
