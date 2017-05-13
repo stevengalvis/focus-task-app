@@ -14,6 +14,49 @@ body {
     background-size: cover;
 }
 
+.blink {
+  -webkit-animation-name: blink;
+     -moz-animation-name: blink;
+       -o-animation-name: blink;
+          animation-name: blink;
+  -webktit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
+        -o-animation-timing-function: linear;
+           animation-timing-function: linear;
+  -webkit-animation-duration: 1s;
+     -moz-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.blink-infinite {
+  -webkit-animation-iteration-count: infinite;
+     -moz-animation-iteration-count: infinite;
+       -o-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@-o-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 .task-form {
     color: #fff;
     font-family: 'Roboto', sans-serif;
@@ -31,6 +74,11 @@ body {
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-size: 50px;
+    text-align: center;
+}
+
+.display-time-left:hover{
+    cursor: pointer;
 }
 
 .add-item {
@@ -92,16 +140,27 @@ body {
 }
 .fa-check:hover {
     color: green;
+    cursor: pointer;
 }
 
 .fa-trash-o:hover {
     color: red;
+    cursor: pointer;
 }
 
 .start-timer:hover{
     color: OrangeRed;
+    cursor: pointer;
 }
 
+.timer-header{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight:  300;
+    line-height: 150%;
+    font-size: 30px;
+    text-align: center;
+}
 
 .task-name {
     color: #fff;
