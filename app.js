@@ -16,6 +16,7 @@ function timer(seconds){
         //check if we should stop it
         if(secondsLeft < 0){
             clearInterval(countdown);
+            swal("All Done!", "Time for a break", "success");
             return;
         }
         displayTimeLeft(secondsLeft);
@@ -51,7 +52,8 @@ function getDataFromAPI(searchTerm){
 
 function renderTask(task) {
     var taskElement = '<button type="button" class = "done-button" name="button"><i class="fa fa-check fa-3x" aria-hidden="true"></i></button>' + '<span class = "task-name">' + task + '</span>'  +
-    '<button type ="button" class ="reset-button" id="reset" name="reset"><i class="fa fa-trash-o fa-3x" aria-hidden="true"></i></button>';
+    '<button type ="button" class ="reset-button" id="reset" name="reset"><i class="fa fa-trash-o fa-3x" aria-hidden="true"></i></button>'+ '<button type = "button" class = "start-timer">' +
+'<i class="fa fa-clock-o fa-3x" aria-hidden="true"></i></button>';
     $('.task-result').html(taskElement);
 
     hideAddInput();
@@ -116,9 +118,35 @@ function(inputValue){
 
 }
 
+function waitForSetTimer(){
+    $('.task-result').on('click','.start-timer', function(e){
+        swal({
+  title: "Set Total Task time",
+  text: "Enter in minutes:",
+  type: "input",
+  showCancelButton: true,
+  closeOnConfirm: false,
+  animation: "slide-from-top",
+  inputPlaceholder: "e.g 25"
+},
+function(inputValue){
+  if (inputValue === false) return false;
+
+  if (inputValue === "") {
+    swal.showInputError("You need to write something!");
+    return false
+  }
+
+  swal("Timer Set!", "Your timer is set to: " + inputValue + ' minutes',  "success");
+  timer(inputValue * 60);
+});
+    });
+}
+
 $(function(){
     watchForSubmit();
     waitforDelete();
     waitForDone();
+    waitForSetTimer();
 
 });

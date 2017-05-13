@@ -7,7 +7,7 @@
 
 body {
     /*background: url(images/space-background.jpg) no-repeat center center fixed;*/
-    background-color: #942222;
+    background-color: rgb(138, 220, 179);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -84,12 +84,22 @@ body {
     margin-left: 20px;
 }
 
+.start-timer{
+    background: transparent;
+    color: #fff;
+    border: none;
+    margin-left: 20px;
+}
 .fa-check:hover {
     color: green;
 }
 
 .fa-trash-o:hover {
     color: red;
+}
+
+.start-timer:hover{
+    color: OrangeRed;
 }
 
 
