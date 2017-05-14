@@ -191,12 +191,12 @@ body {
 /* TODO: fix clock icon on device of s5 */
 
 @media (max-width: 760px) {
-    .task-result{
-    width: 20%;
+    /*.task-result{
+    width: 100%;
     }
 
     .reset-button{
         margin: 20px;
-    }
+    }*/
 
  }
