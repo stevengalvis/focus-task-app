@@ -29,7 +29,11 @@ body {
 .features{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 33.3%;
+    margin: 1%;
+
 }
 
 .timer-section{
@@ -64,4 +68,31 @@ body {
 
 .icon-description{
     color: #fff;
+}
+.document-icon{
+    background: transparent;
+    color: #fff;
+    border: none;
+}
+
+.description{
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    width: 50%;
+}
+.document-icon{
+    display: block;
+
+}
+.button-container{
+    text-align: center;
+}
+
+.start-button{
+    color: #fff;
+    border: #fff 2px solid;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 10px;
 }
