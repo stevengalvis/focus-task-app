@@ -45,7 +45,7 @@ function getDataFromAPI(searchTerm){
         var results = data.data;
         var resultElement = '';
         if (data){
-            resultElement += '<img class = "gif-image" src = "' + results.fixed_height_downsampled_url + '">';
+            resultElement += '<img src = "' + results.fixed_height_downsampled_url + '">';
             console.log(resultElement);
         }
 
