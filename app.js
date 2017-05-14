@@ -54,9 +54,9 @@ function getDataFromAPI(searchTerm){
 }
 
 function renderTask(task) {
-    var taskElement = '<button type="button" class = "done-button" name="button" title = "mark completed"><i class="fa fa-check fa-3x" aria-hidden="true"></i></button>' + '<span class = "task-name">' + task + '</span>'  +
+    var taskElement = '<div class = "task-container"><button type="button" class = "done-button" name="button" title = "mark completed"><i class="fa fa-check fa-3x" aria-hidden="true"></i></button>' + '<span class = "task-name">' + task + '</span>'  +
     '<button type ="button" class ="reset-button" id="reset" name="reset" title = "delete item"><i class="fa fa-trash-o fa-3x" aria-hidden="true"></i></button>'+ '<button type = "button" class = "start-timer" title = "reset time">' +
-    '<i class="fa fa-clock-o fa-3x" aria-hidden="true"></i></button>';
+    '<i class="fa fa-clock-o fa-3x" aria-hidden="true"></i></button></div>';
     $('.task-result').html(taskElement);
     $('.timer-header').removeClass('visually-hidden');
     hideAddInput();
