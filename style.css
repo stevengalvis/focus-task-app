@@ -11,7 +11,8 @@ body {
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-weight:  300;
-    line-height: 100%;
+    height: 100%;
+    line-height: 70%;
     font-size: 80px;
     text-align: center;
     text-shadow: 0 1px 5px rgba(0,0,0,.1);
@@ -95,4 +96,15 @@ body {
     border: #fff 2px solid;
     background: rgba(0, 0, 0, 0.5);
     margin: 10px;
+    cursor: pointer;
 }
+
+.start-button:hover{
+    border-color: YellowGreen;
+}
+
+@media (max-width: 500px) {
+    .description{
+    width: 90%;
+    }
+ }
