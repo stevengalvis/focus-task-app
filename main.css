@@ -187,6 +187,7 @@ body {
     white-space: nowrap; /* 1 */
 }
 
+
 /* TODO: fix clock icon on device of s5 */
 
 @media (max-width: 760px) {
@@ -197,4 +198,5 @@ body {
     .reset-button{
         margin: 20px;
     }
+
  }

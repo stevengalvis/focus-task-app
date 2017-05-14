@@ -45,7 +45,7 @@ function getDataFromAPI(searchTerm){
         var results = data.data;
         var resultElement = '';
         if (data){
-            resultElement += '<img src = "' + results.fixed_height_downsampled_url + '">';
+            resultElement += '<img class = "gif-image" src = "' + results.fixed_height_downsampled_url + '">';
             console.log(resultElement);
         }
 
@@ -56,7 +56,7 @@ function getDataFromAPI(searchTerm){
 function renderTask(task) {
     var taskElement = '<button type="button" class = "done-button" name="button" title = "mark completed"><i class="fa fa-check fa-3x" aria-hidden="true"></i></button>' + '<span class = "task-name">' + task + '</span>'  +
     '<button type ="button" class ="reset-button" id="reset" name="reset" title = "delete item"><i class="fa fa-trash-o fa-3x" aria-hidden="true"></i></button>'+ '<button type = "button" class = "start-timer" title = "reset time">' +
-'<i class="fa fa-clock-o fa-3x" aria-hidden="true"></i></button>';
+    '<i class="fa fa-clock-o fa-3x" aria-hidden="true"></i></button>';
     $('.task-result').html(taskElement);
     $('.timer-header').removeClass('visually-hidden');
     hideAddInput();
@@ -66,12 +66,11 @@ function hideAddInput(){
     $('.task-form').addClass('visually-hidden');
 }
 
-
-
 //event listenerss
 function waitforDelete(){
     $('.task-result').on('click', '.reset-button', function(e){
         $('.timer-header').addClass('visually-hidden');
+        //display failed gif
         getDataFromAPI('fail');
         $('.task-form').removeClass('visually-hidden');
         $('.task-form').trigger('reset');
@@ -89,6 +88,7 @@ function waitForDone(){
         getDataFromAPI('success');
         $('.task-form').removeClass('visually-hidden');
         $('.task-form').trigger('reset');
+        //set timer to default
         clearInterval(countdown);
         timerDisplay.textContent = '';
         document.title = '0:00';
@@ -117,25 +117,25 @@ $('.display-time-left').on('click', function(e){
 
 function setTimer(){
     swal({
-title: "Set Total Task time",
-text: "Enter in minutes:",
-type: "input",
-showCancelButton: true,
-closeOnConfirm: false,
-animation: "slide-from-top",
-inputPlaceholder: "e.g 25"
-},
-function(inputValue){
-if (inputValue === false) return false;
+        title: "Set Total Task time",
+        text: "Enter in minutes:",
+        type: "input",
+        showCancelButton: true,
+        closeOnConfirm: false,
+        animation: "slide-from-top",
+        inputPlaceholder: "e.g 25"
+    },
+        function(inputValue){
+        if (inputValue === false) return false;
 
-if (inputValue === "") {
-swal.showInputError("You need to write something!");
-return false
-}
+        if (inputValue === "") {
+            swal.showInputError("You need to write something!");
+            return false
+        }
 
-swal("Timer Set!", "Your timer is set to: " + inputValue + ' minutes',  "success");
-timer(inputValue * 60);
-});
+        swal("Timer Set!", "Your timer is set to: " + inputValue + ' minutes',  "success");
+        timer(inputValue * 60);
+        });
 }
 
 $(function(){
