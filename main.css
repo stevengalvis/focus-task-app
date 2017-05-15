@@ -122,7 +122,7 @@ body {
     background: transparent;
     color: #fff;
     border: none;
-    margin-right: 20px;
+
 
 }
 
@@ -130,7 +130,7 @@ body {
     background: transparent;
     color: #fff;
     border: none;
-    margin-left: 20px;
+
 
 }
 
@@ -138,7 +138,7 @@ body {
     background: transparent;
     color: #fff;
     border: none;
-    margin-left: 20px;
+
 }
 .fa-check:hover {
     color: green;
@@ -186,20 +186,22 @@ body {
     width: 1px;
     white-space: nowrap; /* 1 */
 }
-
+.task-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 /* TODO: fix clock icon on device of s5 */
 
 @media (max-width: 760px) {
-    .task-container{
-        flex-direction: row;
+    .task-container {
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
-    .task-name{
-        flex-basis: fit-content;
-
+    .task-name {
+    width: 50%;
+    height: 50%;
+    text-align: center;
       }
 }
