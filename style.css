@@ -4,7 +4,6 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
 }
 
 .main-header{
@@ -17,14 +16,12 @@ body {
     text-align: center;
     text-shadow: 0 1px 5px rgba(0,0,0,.1);
     background: rgba(0, 0, 0, 0.5);
-
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*height: 100vh;*/
 }
 
 .features{
@@ -83,15 +80,15 @@ body {
     text-align: center;
     width: 50%;
 }
-.document-icon{
+.document-icon {
     display: block;
 
 }
-.button-container{
+.button-container {
     text-align: center;
 }
 
-.start-button{
+.start-button {
     color: #fff;
     border: #fff 2px solid;
     background: rgba(0, 0, 0, 0.5);
@@ -99,7 +96,7 @@ body {
     cursor: pointer;
 }
 
-.start-button:hover{
+.start-button:hover {
     border-color: YellowGreen;
 }
 
