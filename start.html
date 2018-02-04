@@ -12,31 +12,49 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
     <body>
-        <header class ="jumbotron main-header">Focus Task App</header>
-        <div class="container">
-        <div class="timer-section features">
-            <i class="fa fa-clock-o fa-5x timer-icon" aria-hidden="true"></i>
-            <span class = "icon-description">Custom timer</span>
+        <div class="header-container">
+          <header class ="header-text">Focus Task App</header>
         </div>
-        <div class = "giphy-section features">
-            <i class="fa fa-picture-o fa-5x giphy-icon" aria-hidden="true"></i>
-            <span class = "icon-description">Random Gifs from Giphy API</span>
-        </div>
-        <div class="focus-section features">
-            <i class="fa fa-headphones fa-5x focus-icon" aria-hidden="true"></i>
-            <span class = "icon-description">Increase focus</span>
-        </div>
-    </div>
-        <div class = "description">
-        <i class="fa fa-file-text-o fa-3x document-icon" aria-hidden="true"></i>
-        <br />
-        <span class = "documen-description">Focus Task App is an app made for focusing on one task at a time. A custom timer allows you to use the Pomodoro Method or custom time sprints. After every task a random gif is displayed from the Giphy API.</span>
-    </div>
-        <div class="button-container">
+        <div class="about-container">
+          <div class="content-container">
+            <div class="task-image-container">
+              <img class="task-image" src="images/thinking.png" />
+            </div>
+            <div class="features-container">
+            <div class="timer-section features">
+                <i class="fa fa-clock-o fa-5x timer-icon" aria-hidden="true"></i>
+                  <div class="description-container">
+                <span class = "icon-description">Custom timer</span>
+              </div>
+            </div>
+            <div class = "giphy-section features">
+                <i class="fa fa-picture-o fa-5x giphy-icon" aria-hidden="true"></i>
+                <div class="description-container">
+                <span class = "icon-description">Random Gifs from Giphy API</span>
+              </div>
+            </div>
+            <div class="focus-section features">
+                <i class="fa fa-headphones fa-5x focus-icon" aria-hidden="true"></i>
+                <div class="description-container">
+                  <span class = "icon-description">Increase focus</span>
+                </div>
+
+            </div>
+
+      </div>
+          <div class = "description">
+          <i class="fa fa-file-text-o fa-3x document-icon" aria-hidden="true"></i>
+          <br />
+          <span class = "description-text">Focus Task App is an app made for focusing on one task at a time. A custom timer allows you to use the Pomodoro Method or custom time sprints. After every task a random gif is displayed from the Giphy API.</span>
+      </div>
+
+          <div class="button-container">
 
 
-        <a href="http://stevegalvis.com/focus-task-app/"><button type="button" name="button" class = "start-button">Get Focused</button></a>
-</div>
+          <a href="http://stevegalvis.com/focus-task-app/"><button type="button" name="button" class = "start-button">Get Focused</button></a>
+    </div>
+    </div>
+  </div>
         <!-- link to jquery -->
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
         <!-- link to app.js -->

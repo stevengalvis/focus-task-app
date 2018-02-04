@@ -1,107 +1,204 @@
 body {
-    background: url(images/woods-background.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background-color: rgb(138, 220, 179);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.main-header{
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-weight:  300;
-    height: 100%;
-    line-height: 70%;
-    font-size: 80px;
-    text-align: center;
-    text-shadow: 0 1px 5px rgba(0,0,0,.1);
-    background: rgba(0, 0, 0, 0.5);
+/************************
+ Header
+*************************/
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header-text {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  height: 100%;
+  line-height: 70%;
+  font-size: 3em;
+  text-align: center;
+  white-space: nowrap;
 }
 
-.features{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 33.3%;
-    margin: 1%;
+/************************
+  Main Image
+*************************/
 
+.task-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.task-image {
+  max-width: 100%;
+  color: #fff;
 }
 
-.timer-section{
-    background: rgba(0, 0, 0, 0.5);
+/************************
+ About App
+*************************/
+
+.about-container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.focus-section{
-    background: rgba(0, 0, 0, 0.5);
+.features-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 15px 20px;
+  flex-direction: column;
 }
 
-.giphy-section{
-    background: rgba(0, 0, 0, 0.5);
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
-.timer-icon{
-    background: transparent;
-    color: #fff;
-    border: none;
+/************************
+ Icons
+*************************/
+
+.timer-section,
+.focus-section,
+.giphy-section,
+.description {
+  border: 2px solid #2a7f55;
+  border-radius: 1em;
+  padding: 23px;
+  margin: 10px;
 }
 
-.giphy-icon{
-    background: transparent;
-    color: #fff;
-    border: none;
+.timer-section,
+.focus-section,
+.giphy-section {
+  /* width: 33.33%; */
+  width: 80%;
 }
 
-.focus-icon{
-    background: transparent;
-    color: #fff;
-    border: none;
+.timer-icon {
+  background: transparent;
+  color: #fff;
+  border: none;
 }
 
-.icon-description{
-    color: #fff;
-}
-.document-icon{
-    background: transparent;
-    color: #fff;
-    border: none;
+.giphy-icon {
+  background: transparent;
+  color: #fff;
+  border: none;
 }
 
-.description{
-    margin: auto;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    text-align: center;
-    width: 50%;
+.focus-icon {
+  background: transparent;
+  color: #fff;
+  border: none;
+}
+
+/* .description-container {
+  position: absolute;
+  bottom: 5px;
+} */
+
+.icon-description {
+  color: #fff;
+  white-space: nowrap;
+  font-size: 1em;
+  width: 100%;
+  height: 100%;
+}
+
+.document-icon {
+  background: transparent;
+  color: #fff;
+  border: none;
+}
+
+/************************
+ Description of App
+*************************/
+
+.description {
+  margin: auto;
+  color: #fff;
+  text-align: center;
+  width: 50%;
 }
 .document-icon {
-    display: block;
-
+  display: block;
 }
 .button-container {
-    text-align: center;
+  text-align: center;
 }
 
 .start-button {
-    color: #fff;
-    border: #fff 2px solid;
-    background: rgba(0, 0, 0, 0.5);
-    margin: 10px;
-    cursor: pointer;
+  color: #fff;
+  border: #2a7f55 2px solid;
+  background: #2a7f55;
+  border-radius: 1em;
+  margin-top: 30px;
+  padding: 10px;
+  cursor: pointer;
+  width: 50%;
+  height: 100%;
 }
 
 .start-button:hover {
-    border-color: YellowGreen;
+  background: #a0ffcf;
+}
+
+.description-text {
+  font-size: 1.5em;
 }
 
 @media (max-width: 500px) {
-    .description{
+  .description {
     width: 90%;
-    }
- }
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .features-container {
+    flex-direction: row;
+  }
+
+  .timer-section,
+  .focus-section,
+  .giphy-section {
+    width: 33.33%;
+  }
+
+  .header-text {
+    font-size: 5em;
+  }
+
+  .icon-description {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .features-container {
+    margin-bottom: 40px;
+  }
+  .icon-description {
+    font-size: 1.5em;
+  }
+
+  .description-text {
+    font-size: 2em;
+  }
+}
