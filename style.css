@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(138, 220, 179);
+  background-color: rgb(34, 35, 49);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -13,18 +13,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 20%;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .header-text {
-  color: #fff;
+  color: #2a7f55;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  height: 100%;
-  line-height: 70%;
-  font-size: 3em;
-  text-align: center;
+  font-size: 2.5em;
   white-space: nowrap;
 }
 
@@ -32,114 +30,20 @@ body {
   Main Image
 *************************/
 
-.task-image-container {
+.hero-image-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 90%;
 }
-.task-image {
-  max-width: 100%;
-  color: #fff;
-}
-
-/************************
- About App
-*************************/
-
-.about-container {
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.features-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 15px 20px;
-  flex-direction: column;
-}
-
-.features {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
-/************************
- Icons
-*************************/
-
-.timer-section,
-.focus-section,
-.giphy-section,
-.description {
-  border: 2px solid #2a7f55;
-  border-radius: 1em;
-  padding: 23px;
-  margin: 10px;
-}
-
-.timer-section,
-.focus-section,
-.giphy-section {
-  /* width: 33.33%; */
-  width: 80%;
-}
-
-.timer-icon {
-  background: transparent;
-  color: #fff;
-  border: none;
-}
-
-.giphy-icon {
-  background: transparent;
-  color: #fff;
-  border: none;
-}
-
-.focus-icon {
-  background: transparent;
-  color: #fff;
-  border: none;
-}
-
-/* .description-container {
-  position: absolute;
-  bottom: 5px;
-} */
-
-.icon-description {
-  color: #fff;
-  white-space: nowrap;
-  font-size: 1em;
+.hero-image {
   width: 100%;
-  height: 100%;
-}
-
-.document-icon {
-  background: transparent;
-  color: #fff;
-  border: none;
+  color: rgb(138, 220, 179);
 }
 
 /************************
- Description of App
+ Button
 *************************/
-
-.description {
-  margin: auto;
-  color: #fff;
-  text-align: center;
-  width: 50%;
-}
-.document-icon {
-  display: block;
-}
 .button-container {
   text-align: center;
 }
@@ -150,9 +54,9 @@ body {
   background: #2a7f55;
   border-radius: 1em;
   margin-top: 30px;
-  padding: 10px;
+  padding: 20px;
   cursor: pointer;
-  width: 50%;
+  width: 100%;
   height: 100%;
 }
 
@@ -160,25 +64,102 @@ body {
   background: #a0ffcf;
 }
 
-.description-text {
-  font-size: 1.5em;
+/************************
+ Features
+*************************/
+
+.about-container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-features-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 15px 20px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.feature-container,
+.app-information-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 -30px;
+}
+
+.features-description-container {
+  padding: 0 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.features-description-container {
+  color: white;
+}
+
+/************************
+ Icons
+*************************/
+
+.timer-section,
+.focus-section,
+.giphy-section,
+.app-information-container {
+  border: 2px solid #2a7f55;
+  border-radius: 1em;
+  padding: 10px;
+  margin: 10px;
+}
+
+.timer-section,
+.focus-section,
+.giphy-section {
+  width: 100%;
+}
+
+.focus-icon,
+.giphy-icon,
+.timer-icon,
+.information-icon {
+  color: rgb(138, 220, 179);
+  border: none;
+}
+
+.icon-description {
+  color: #2a7f55;
+  font-size: 1em;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  display: block;
+  margin-top: 5%;
+}
+
+/************************
+ Description of App
+*************************/
+
+.app-information-container {
+  text-align: center;
+}
+
+.app-information-text {
+  font-size: 1em;
+  color: #fff;
 }
 
 @media (max-width: 500px) {
-  .description {
-    width: 90%;
-  }
 }
 
 @media only screen and (min-width: 640px) {
-  .features-container {
-    flex-direction: row;
-  }
-
-  .timer-section,
-  .focus-section,
-  .giphy-section {
-    width: 33.33%;
+  .feature-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .header-text {
@@ -191,14 +172,21 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-  .features-container {
+  .feature-container {
+    overflow: hidden;
+    flex: 1;
+  }
+  .main-features-container {
+    flex-direction: row;
+  }
+  .main-features-container {
     margin-bottom: 40px;
   }
   .icon-description {
     font-size: 1.5em;
   }
 
-  .description-text {
+  .app-information-text {
     font-size: 2em;
   }
 }
