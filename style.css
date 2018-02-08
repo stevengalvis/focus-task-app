@@ -13,6 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   margin-top: 20%;
   margin-bottom: 40px;
   text-align: center;
@@ -24,6 +25,7 @@ body {
   font-weight: 300;
   font-size: 2.5em;
   white-space: nowrap;
+  width: 100%;
 }
 
 /************************
@@ -68,7 +70,7 @@ body {
  Features
 *************************/
 
-.about-container {
+.main-content-container {
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -80,7 +82,7 @@ body {
   align-items: center;
   margin: 10px 15px 20px;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .feature-container,
@@ -88,7 +90,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 -30px;
+  margin: 10px;
+  border: 2px solid #2a7f55;
+  border-radius: 1em;
+  padding: 10px;
 }
 
 .features-description-container {
@@ -105,22 +110,6 @@ body {
  Icons
 *************************/
 
-.timer-section,
-.focus-section,
-.giphy-section,
-.app-information-container {
-  border: 2px solid #2a7f55;
-  border-radius: 1em;
-  padding: 10px;
-  margin: 10px;
-}
-
-.timer-section,
-.focus-section,
-.giphy-section {
-  width: 100%;
-}
-
 .focus-icon,
 .giphy-icon,
 .timer-icon,
@@ -136,7 +125,7 @@ body {
   height: 100%;
   align-self: center;
   display: block;
-  margin-top: 5%;
+  margin-top: 10px;
 }
 
 /************************
@@ -145,6 +134,7 @@ body {
 
 .app-information-container {
   text-align: center;
+  margin: 10px 15px 20px;
 }
 
 .app-information-text {
@@ -152,14 +142,13 @@ body {
   color: #fff;
 }
 
-@media (max-width: 500px) {
-}
-
 @media only screen and (min-width: 640px) {
+  .main-features-container {
+    flex-direction: row;
+  }
+
   .feature-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 50%;
   }
 
   .header-text {
@@ -171,14 +160,11 @@ body {
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .feature-container {
-    overflow: hidden;
-    flex: 1;
+    width: 33.33%;
   }
-  .main-features-container {
-    flex-direction: row;
-  }
+
   .main-features-container {
     margin-bottom: 40px;
   }
