@@ -6,6 +6,18 @@ body {
   background-size: cover;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 /************************
  Header
 *************************/
@@ -48,6 +60,8 @@ body {
 *************************/
 .button-container {
   text-align: center;
+  margin: 0 auto;
+  max-width: 80%;
 }
 
 .start-button {
@@ -59,7 +73,6 @@ body {
   padding: 20px;
   cursor: pointer;
   width: 100%;
-  height: 100%;
 }
 
 .start-button:hover {
@@ -70,19 +83,18 @@ body {
  Features
 *************************/
 
-.main-content-container {
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .main-features-container {
   display: flex;
-  align-items: center;
+  justify-content: center;
   margin: 10px 15px 20px;
-  flex-direction: column;
   flex-wrap: wrap;
+}
+
+.feature-container {
+  margin: 10px;
+  border: 2px solid #2a7f55;
+  border-radius: 1em;
+  padding: 10px;
 }
 
 .feature-container,
@@ -90,10 +102,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
-  border: 2px solid #2a7f55;
-  border-radius: 1em;
-  padding: 10px;
+}
+
+.app-information-container {
+  text-align: center;
+  margin: 10px 15px 20px;
 }
 
 .features-description-container {
@@ -132,21 +145,29 @@ body {
  Description of App
 *************************/
 
-.app-information-container {
-  text-align: center;
-  margin: 10px 15px 20px;
-}
-
 .app-information-text {
   font-size: 1em;
   color: #fff;
 }
 
-@media only screen and (min-width: 640px) {
-  .main-features-container {
-    flex-direction: row;
-  }
+/************************
+ Footer
+*************************/
+.footer-container {
+  text-align: center;
+  position: relative;
+}
 
+.devicons {
+  font-size: 3em;
+  color: #2a7f55;
+}
+
+/************************
+ Media Queries
+*************************/
+
+@media all and (min-width: 40em) {
   .feature-container {
     width: 50%;
   }
@@ -160,19 +181,27 @@ body {
   }
 }
 
-@media screen and (min-width: 960px) {
+@media all and (min-width: 60em) {
   .feature-container {
     width: 33.33%;
+  }
+
+  .features-description-container p {
+    font-size: 1.5em;
   }
 
   .main-features-container {
     margin-bottom: 40px;
   }
   .icon-description {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .app-information-text {
     font-size: 2em;
+  }
+
+  .button-container {
+    width: 50%;
   }
 }
