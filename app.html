@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Focus One Task App</title>
+        <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAkBfAAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREREREREREREREREREQAAAAAAEREQACIgAAABERAAIiAAAAEREAAiIAAAAREQACIgAAABERAAIiIiAAEREAAiIiIAAREQACIgAAABERAAIiAAAAEREAAiIiIAAREQAAIiIgABEREAAAAAABERERERERERERERERERERERH//wAA4AcAAMADAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAOAHAAD//wAA" rel="icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class ="timer">
+                <div class="display">
+                    <p class ="visually-hidden timer-header">Time Until Break:</p>
+                    <h1 class ="display-time-left" title="Reset Timer"></h1>
+                </div>
+            </div>
+            <div class="task-result">
+
+            </div>
+            <form class="task-form" action="#">
+                <label for="task-input" class = "task-label">Enter task</label>
+                <input id ="task-input" type="text" class="text-input" placeholder="Study">
+                <button type="submit" class ="add-item" name="button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </form>
+
+        </div>
+
+        <!-- link to jquery -->
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <!-- link to app.js -->
+        <script src="app.js" charset="utf-8"></script>
+        <!-- link to font-awesome -->
+         <script src="https://use.fontawesome.com/fb7adda49e.js"></script>
+         <script src="sweetalert-master/dist/sweetalert.min.js"></script>
+    </body>
+</html>

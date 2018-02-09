@@ -2,35 +2,74 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Focus One Task App</title>
+        <title>Focus Task App</title>
         <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAkBfAAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREREREREREREREREREQAAAAAAEREQACIgAAABERAAIiAAAAEREAAiIAAAAREQACIgAAABERAAIiIiAAEREAAiIiIAAREQACIgAAABERAAIiAAAAEREAAiIiIAAREQAAIiIgABEREAAAAAABERERERERERERERERERERERH//wAA4AcAAMADAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAOAHAAD//wAA" rel="icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css" rel="stylesheet">
     </head>
     <body>
-
-        <div class="container">
-            <div class ="timer">
-                <div class="display">
-                    <p class ="visually-hidden timer-header">Time Until Break:</p>
-                    <h1 class ="display-time-left" title="Reset Timer"></h1>
+        <div class="header-container">
+          <header class ="header-text">Focus Task App</header>
+          <div class="hero-image-container">
+            <img class="hero-image" src="images/Apple Macbook Pro 15 focus task app.png" />
+          </div>
+        </div>
+        <!-- Main Content !-->
+        <div class="main-content-wrapper">
+            <div class="button-container">
+            <a href="/app.html"><button type="button" name="button" class = "start-button">Get Focused</button></a>
+      </div>
+            <div class="main-features-container">
+            <div class="feature-container">
+                <i class="fas fa-clock fa-5x timer-icon" aria-hidden="true"></i>
+                  <div class="features-description-container">
+                <span class = "icon-description">Custom timer</span>
+                <p>
+                  Use the Pomodoro technique to push through each task or set a custom time.
+                </p>
+              </div>
+            </div>
+            <div class = "feature-container">
+                <i class="fas fa-file-image fa-5x giphy-icon" aria-hidden="true"></i>
+                <div class="features-description-container">
+                <span class = "icon-description">Gifs from Giphy API</span>
+                <p>
+                  Each time a task is completed a success Gif is diplayed. Tasks that are uncompleted are shown failed gifs.
+                </p>
+              </div>
+            </div>
+            <div class="feature-container">
+                <i class="fas fa-headphones fa-5x focus-icon" aria-hidden="true"></i>
+                <div class="features-description-container">
+                  <span class = "icon-description">Increase focus</span>
+                  <p>
+                    Focusing on one task at a time is a proven way to get things done. Multi-tasking and context switching can be detrimental to your productivity.
+                  </p>
                 </div>
             </div>
-            <div class="task-result">
+      </div>
+          <div class = "app-information-container">
+            <i class="fas fa-info-circle fa-5x information-icon" aria-hidden="true"></i>
+          <div class="information-text-container">
+            <span class="icon-description">One Task</span>
+              <p class = "app-information-text">Focus Task App is an app made for focusing on one task at a time. A custom timer allows you to use the Pomodoro Method or custom time sprints. After every task a random gif is displayed from the Giphy API.</p>
+          </div>
 
-            </div>
-            <form class="task-form" action="#">
-                <label for="task-input" class = "task-label">Enter task</label>
-                <input id ="task-input" type="text" class="text-input" placeholder="Study">
-                <button type="submit" class ="add-item" name="button"><i class="fa fa-plus" aria-hidden="true"></i></button>
-            </form>
-
+      </div>
         </div>
+    <!-- Main Content Over !-->
+    <footer>
+       <div class="footer-container">
+          <a href="https://github.com/stevengalvis">
+          <span class="devicons devicons-github_full"></span><span class="devicons devicons-github"></span></a>
+       </div>
+    </footer>
+
 
         <!-- link to jquery -->
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
@@ -39,5 +78,6 @@
         <!-- link to font-awesome -->
          <script src="https://use.fontawesome.com/fb7adda49e.js"></script>
          <script src="sweetalert-master/dist/sweetalert.min.js"></script>
+           <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     </body>
 </html>
